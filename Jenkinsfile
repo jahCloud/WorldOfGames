@@ -13,7 +13,7 @@ pipeline {
         stage('Building Image') {
             steps {
                 echo 'Building Image..'
-                bat 'docker-compose build'
+                bat 'docker build -t world_of_games'
             }
         }
 
@@ -27,6 +27,7 @@ pipeline {
         stage('Testing Application') {
             steps {
                 echo 'Testing Application..'
+                bat 'pip install selenium'
                 bat 'python tests/e2e.py'
             }
         }
