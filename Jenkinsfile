@@ -6,7 +6,7 @@ pipeline {
         stage('Cloning Git') {
             steps {
                 echo 'Cloning Git..'
-                git 'https://github.com/AlexKlogin/WorldOfGames'
+                git 'https://github.com/jahCloud/WorldOfGames'
             }
         }
 
