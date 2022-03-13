@@ -1,4 +1,5 @@
-FROM tiangolo/uwsgi-nginx:python3.8-alpine
+FROM python:alpine3.14
+WORKDIR /app
 COPY ./Scores.txt /app/
 COPY ./*.py /app/
 COPY ./tests/* /app/tests/
